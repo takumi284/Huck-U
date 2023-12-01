@@ -4,7 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
     tools:context=".SettingProfActivity">
+
+    <View
+        android:id="@+id/backgroundView"
+        android:layout_width="349dp"
+        android:layout_height="48dp"
+        android:background="@color/skyBlue"
+        android:padding="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/nameTitleView"
+        app:layout_constraintEnd_toEndOf="@+id/editTextText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/nameTitleView"
+        app:layout_constraintTop_toTopOf="@+id/nameTitleView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/selectedImageView"
@@ -48,5 +62,6 @@
         android:textSize="34sp"
         app:layout_constraintStart_toEndOf="@+id/nameTitleView"
         app:layout_constraintTop_toTopOf="@+id/nameTitleView" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
