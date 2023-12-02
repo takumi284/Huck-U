@@ -5,7 +5,9 @@
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
+
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -18,13 +20,17 @@
         android:theme="@style/Theme.HuckU"
         tools:targetApi="31">
         <activity
-            android:name=".CameraActivity"
+            android:name=".ConfirmActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".CameraActivity"
+            android:exported="true">
         </activity>
         <activity
             android:name=".ViewActivity"
@@ -37,6 +43,10 @@
         <activity
             android:name=".MainActivity"
             android:exported="false">
+        </activity>
+        <activity
+            android:name=".SettingProfActivity"
+            android:exported="true">
         </activity>
     </application>
 
