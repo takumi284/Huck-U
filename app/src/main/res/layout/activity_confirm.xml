@@ -39,7 +39,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="88dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mailView"
-        app:srcCompat="@drawable/dummiy_ok"
-        tools:layout_editor_absoluteX="145dp" />
+        app:srcCompat="@drawable/dummiy_ok" />
 </androidx.constraintlayout.widget.ConstraintLayout>

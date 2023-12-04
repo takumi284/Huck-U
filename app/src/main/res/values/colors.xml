@@ -2,6 +2,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="brown">#684E31</color>
+    <color name="brownWhite">#F8DABB</color>
     <color name="backgroundColor">#FFFAE6</color>
     <color name="skyBlue">#9BEAFF</color>
+    <color name="red">#FF7700</color>
+    <color name="yellow">#FBFF87</color>
+    <color name="redWhite">#FFA2A2</color>
 </resources>
