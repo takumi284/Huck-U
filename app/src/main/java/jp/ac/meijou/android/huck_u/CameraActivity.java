@@ -11,6 +11,7 @@ import androidx.camera.lifecycle.ProcessCameraProvider;
 import androidx.camera.view.PreviewView;
 import androidx.core.content.ContextCompat;
 
+import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
@@ -101,6 +102,13 @@ public class CameraActivity extends AppCompatActivity {
                             // QRコードが見つかったときの処理
                             String value = barcode.getDisplayValue();
                             Log.d("QRCodeScanner", "QR Code Value: " + value);
+
+                            // 新しい画面に遷移
+                            Intent intent = new Intent(CameraActivity.this, ConfirmActivity.class);
+                            intent.putExtra("QRCodeValue", value);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            startActivity(intent);
+                            finish();
                         }
                     })
                     .addOnFailureListener(e -> {
