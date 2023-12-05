@@ -20,19 +20,18 @@
 
     <EditText
         android:id="@+id/editSchoolNumber"
-        android:layout_width="135dp"
+        android:layout_width="145dp"
         android:layout_height="48dp"
-        android:layout_marginStart="104dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="24dp"
         android:digits="0123456789"
         android:ems="10"
         android:hint="学籍番号"
         android:inputType="number"
         android:maxLength="9"
         android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/mailView"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/mailView" />
+        app:layout_constraintBottom_toBottomOf="@+id/mailView"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/imageButton"
