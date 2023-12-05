@@ -20,9 +20,11 @@
         android:theme="@style/Theme.HuckU"
         tools:targetApi="31">
         <activity
+            android:name=".FriendActivity"
+            android:exported="false" />
+        <activity
             android:name=".ConfirmActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".CameraActivity"
             android:exported="true">
@@ -34,20 +36,16 @@
         </activity>
         <activity
             android:name=".ViewActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".MapActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name=".SettingProfActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>
