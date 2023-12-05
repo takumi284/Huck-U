@@ -22,10 +22,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         this.data = data;
     }
 
-    private int rand;
+    private int rand, intContentView5, seats;
+
+    private String contentView5, strSeats;
     long seed = 123; // 任意のシード値を指定
     Random random = new Random(seed);
-    Random random2 = new Random(seed + 1);
 
     @NonNull
     @Override
@@ -45,13 +46,18 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         );
 
         holder.roomView.setText(rooms.get(position));
-        holder.seatView.setText("200");
+
+        seats = Integer.parseInt(data.get(position)) + 219;
+        strSeats = Integer.valueOf(seats).toString();
+        holder.seatView.setText(strSeats);
+
         holder.View5.setText(data.get(position));
 
-        rand = random.nextInt(60);
-        if (rand < 40){
+        contentView5 = holder.View5.getText().toString();
+        intContentView5 = Integer.parseInt(contentView5);
+        if (intContentView5 < 40){
             holder.View5.setBackgroundColor(Color.parseColor("#9BEAFF"));
-        } else if (rand < 55) {
+        } else if (intContentView5 < 55) {
             holder.View5.setBackgroundColor(Color.parseColor("#FBFF87"));
         } else {
             holder.View5.setBackgroundColor(Color.parseColor("#FF7700"));
@@ -59,7 +65,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
         ArrayList<String> OorX = new ArrayList<String>();
         for (int i = 0; i < 9; i++){
-            rand = random2.nextInt(60);
+            rand = random.nextInt(60);
             if (rand < 50){
                 OorX.add("x");
             }
