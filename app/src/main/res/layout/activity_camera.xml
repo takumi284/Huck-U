@@ -22,7 +22,7 @@
     </androidx.camera.view.PreviewView>
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/imageButtonQr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/baseline_qr_code_2_24" />

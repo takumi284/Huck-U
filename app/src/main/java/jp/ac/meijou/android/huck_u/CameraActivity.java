@@ -103,12 +103,22 @@ public class CameraActivity extends AppCompatActivity {
                             String value = barcode.getDisplayValue();
                             Log.d("QRCodeScanner", "QR Code Value: " + value);
 
-                            // 新しい画面に遷移
-                            Intent intent = new Intent(CameraActivity.this, ConfirmActivity.class);
-                            intent.putExtra("QRCodeValue", value);
-                            intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                            startActivity(intent);
-                            finish();
+                            //画面遷移を2パターンに分岐
+                            Intent intent;
+                            if (value.substring(0, 3).equals("FRI")){
+                                intent = new Intent(CameraActivity.this, FriendActivity.class);
+                                intent.putExtra("QRCodeValue", value);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                startActivity(intent);
+                                finish();
+                            }
+                            else if (value.substring(0, 3).equals("CON")){
+                                intent = new Intent(CameraActivity.this, ConfirmActivity.class);
+                                intent.putExtra("QRCodeValue", value);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                startActivity(intent);
+                                finish();
+                            }
                         }
                     })
                     .addOnFailureListener(e -> {
