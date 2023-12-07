@@ -4,11 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import jp.ac.meijou.android.huck_u.databinding.ActivityFriendBinding;
+
 public class FriendActivity extends AppCompatActivity {
+
+    ActivityFriendBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_friend);
+        binding = ActivityFriendBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        String qrCodeValue = getIntent().getStringExtra("QRCodeValue");
+
+        binding.nameView.setText(qrCodeValue.substring(3));
     }
 }
