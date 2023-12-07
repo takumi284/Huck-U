@@ -24,7 +24,7 @@ public class ConfirmActivity extends AppCompatActivity {
         // qrCodeValue を使用して必要な処理を行う
         if (qrCodeValue != null) {
             // qrCodeValue を使用して何か処理を行う
-            binding.editSchoolNumber.setText(qrCodeValue);
+            binding.editSchoolNumber.setText(qrCodeValue.substring(3));
         } else {
             Log.e("AnotherActivity", "QR Code Value is null");
         }
