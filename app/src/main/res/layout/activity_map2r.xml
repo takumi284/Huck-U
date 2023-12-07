@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/imageButton20"
+        android:layout_width="304dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="12dp"
+        android:contentDescription="このボタンはプロフィールへの遷移ボタンです"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton19"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/map_profilebutton" />
+
+    <ImageButton
+        android:id="@+id/imageButton19"
+        android:layout_width="290dp"
+        android:layout_height="57dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="28dp"
+        android:contentDescription="このボタンはqrへの遷移ボタンです"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/map_qrbutton" />
+
+    <ImageButton
+        android:id="@+id/imageButton17"
+        android:layout_width="97dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="408dp"
+        android:layout_marginEnd="52dp"
+        android:contentDescription="このボタンはe棟のボタンです"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/map_e" />
+
+    <ImageButton
+        android:id="@+id/imageButton16"
+        android:layout_width="93dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="188dp"
+        android:layout_marginEnd="36dp"
+        android:contentDescription="このボタンはグランのボタンです"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/map_g" />
+
+    <ImageButton
+        android:id="@+id/imageButton15"
+        android:layout_width="84dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="168dp"
+        android:contentDescription="このボタンはタワーのボタンです"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/map_t" />
+
+    <ImageButton
+        android:id="@+id/imageButton14"
+        android:layout_width="215dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="112dp"
+        android:contentDescription="このボタンはn棟のボタンです"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/map_n" />
+
+    <ImageButton
+        android:id="@+id/imageButton13"
+        android:layout_width="85dp"
+        android:layout_height="156dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="228dp"
+        android:contentDescription="このボタンはs棟のボタンです"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/map_s" />
+
+    <ImageButton
+        android:id="@+id/imageButton21"
+        android:layout_width="248dp"
+        android:layout_height="56dp"
+        android:contentDescription="このボタンは段階を切り替えるボタンの仮置きです"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/map_qrbutton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
