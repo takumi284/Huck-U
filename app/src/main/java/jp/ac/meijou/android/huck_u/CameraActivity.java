@@ -15,6 +15,7 @@ import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.Task;
@@ -32,6 +33,8 @@ import java.util.concurrent.Executors;
 public class CameraActivity extends AppCompatActivity {
 
     private PreviewView previewView;
+
+    private ImageButton imageButtonQr;
     private ExecutorService cameraExecutor;
     private static final int CAMERA_PERMISSION_REQUEST_CODE = 1001; // 任意の数値
 
@@ -41,9 +44,17 @@ public class CameraActivity extends AppCompatActivity {
         setContentView(R.layout.activity_camera);
 
         previewView = findViewById(R.id.previewView);
+        imageButtonQr = findViewById(R.id.imageButtonQr);
 
         // カメラの初期化とQRコードの読み取り処理を開始
         startCamera();
+
+        imageButtonQr.setOnClickListener(view -> {
+            Intent intent;
+            intent = new Intent(CameraActivity.this, GenerateQRCodeActivity.class);
+            startActivity(intent);
+            finish();
+        });
     }
     // カメラの初期化と起動
     private void startCamera() {

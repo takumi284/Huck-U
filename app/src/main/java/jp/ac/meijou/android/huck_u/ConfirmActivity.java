@@ -2,6 +2,7 @@ package jp.ac.meijou.android.huck_u;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -28,5 +29,19 @@ public class ConfirmActivity extends AppCompatActivity {
         } else {
             Log.e("AnotherActivity", "QR Code Value is null");
         }
+
+        binding.oKButton.setOnClickListener(view -> {
+            Intent intent;
+            intent = new Intent(ConfirmActivity.this, MapActivity.class);
+            startActivity(intent);
+            finish();
+        });
+
+        binding.backButton.setOnClickListener(view -> {
+            Intent intent;
+            intent = new Intent(ConfirmActivity.this, CameraActivity.class);
+            startActivity(intent);
+            finish();
+        });
     }
 }

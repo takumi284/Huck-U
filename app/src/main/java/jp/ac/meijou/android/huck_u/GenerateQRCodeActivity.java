@@ -31,6 +31,13 @@ public class GenerateQRCodeActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         generateQRCode("FRIタクミ");
+
+        binding.backButton.setOnClickListener(view -> {
+            Intent intent;
+            intent = new Intent(GenerateQRCodeActivity.this, MapActivity.class);
+            startActivity(intent);
+            finish();
+        });
     }
 
     private void generateQRCode(String data) {

@@ -23,12 +23,20 @@ public class SettingProfActivity extends AppCompatActivity {
         ImageButton selectImageButton = findViewById(R.id.selectImageButton);
         ImageView selectedImageView = findViewById(R.id.selectedImageView);
         selectedImageView.setImageResource(R.drawable.icon_sample);
+        ImageButton backButton = findViewById(R.id.backButton);
 
         selectImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openGallery();
             }
+        });
+
+        backButton.setOnClickListener(view -> {
+            Intent intent;
+            intent = new Intent(SettingProfActivity.this, MapActivity.class);
+            startActivity(intent);
+            finish();
         });
     }
 

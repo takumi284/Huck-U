@@ -19,7 +19,7 @@
         app:srcCompat="@drawable/baseline_qr_code_2_24" />
 
     <ImageButton
-        android:id="@+id/imageButton10"
+        android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
