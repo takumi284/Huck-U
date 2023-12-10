@@ -16,8 +16,11 @@ public class FriendActivity extends AppCompatActivity {
         binding = ActivityFriendBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        String qrCodeValue = getIntent().getStringExtra("QRCodeValue");
+//        String qrCodeValue = getIntent().getStringExtra("QRCodeValue");
+//
+//        binding.nameView.setText(qrCodeValue.substring(3));
 
-        binding.nameView.setText(qrCodeValue.substring(3));
+        binding.nameView.setText("aaaaa");
+        binding.friendImageView.setImageResource(R.drawable.icon_sample2);
     }
 }

@@ -7,21 +7,8 @@
     android:background="@color/backgroundColor"
     tools:context=".FriendActivity">
 
-    <View
-        android:id="@+id/backgroundView"
-        android:layout_width="349dp"
-        android:layout_height="48dp"
-        android:background="@color/skyBlue"
-        android:padding="100dp"
-        app:layout_constraintBottom_toBottomOf="@+id/nameTitleView"
-        app:layout_constraintEnd_toEndOf="@+id/nameView"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/nameTitleView"
-        app:layout_constraintTop_toTopOf="@+id/nameTitleView"
-        app:layout_constraintVertical_bias="0.0" />
-
     <ImageView
-        android:id="@+id/selectedImageView"
+        android:id="@+id/friendImageView"
         android:layout_width="252dp"
         android:layout_height="272dp"
         android:layout_marginTop="204dp"
@@ -37,22 +24,23 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="184dp"
-        android:text="Name: "
+        android:text="Name:   "
         android:textSize="34sp"
         android:background="@color/skyBlue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selectedImageView" />
+        app:layout_constraintTop_toBottomOf="@+id/friendImageView" />
 
     <TextView
         android:id="@+id/nameView"
-        android:layout_width="245dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="244dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/skyBlue"
         android:ems="10"
         android:inputType="text"
         android:textSize="34sp"
-        android:background="@color/skyBlue"
         app:layout_constraintStart_toEndOf="@+id/nameTitleView"
         app:layout_constraintTop_toTopOf="@+id/nameTitleView"
         tools:text="URLを出した人" />
