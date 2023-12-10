@@ -39,6 +39,7 @@
         android:layout_marginBottom="184dp"
         android:text="Name: "
         android:textSize="34sp"
+        android:background="@color/skyBlue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/selectedImageView" />
@@ -51,6 +52,7 @@
         android:ems="10"
         android:inputType="text"
         android:textSize="34sp"
+        android:background="@color/skyBlue"
         app:layout_constraintStart_toEndOf="@+id/nameTitleView"
         app:layout_constraintTop_toTopOf="@+id/nameTitleView"
         tools:text="URLを出した人" />
@@ -60,10 +62,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:background="@color/backgroundColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameView"
         app:srcCompat="@drawable/dummiy_ok" />
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/backgroundColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
