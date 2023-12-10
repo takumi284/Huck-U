@@ -22,9 +22,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         this.data = data;
     }
 
-    private int rand, intContentView5, seats;
+    private int rand, intContentView3, seats;
 
-    private String contentView5, strSeats;
+    private String contentView3, strSeats;
     long seed = 123; // 任意のシード値を指定
     Random random = new Random(seed);
 
@@ -51,16 +51,16 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         strSeats = Integer.valueOf(seats).toString();
         holder.seatView.setText(strSeats);
 
-        holder.View5.setText(data.get(position));
+        holder.View3.setText(data.get(position));
 
-        contentView5 = holder.View5.getText().toString();
-        intContentView5 = Integer.parseInt(contentView5);
-        if (intContentView5 < 40){
-            holder.View5.setBackgroundColor(Color.parseColor("#9BEAFF"));
-        } else if (intContentView5 < 55) {
-            holder.View5.setBackgroundColor(Color.parseColor("#FBFF87"));
+        contentView3 = holder.View3.getText().toString();
+        intContentView3 = Integer.parseInt(contentView3);
+        if (intContentView3 < 40){
+            holder.View3.setBackgroundColor(Color.parseColor("#9BEAFF"));
+        } else if (intContentView3 < 55) {
+            holder.View3.setBackgroundColor(Color.parseColor("#FBFF87"));
         } else {
-            holder.View5.setBackgroundColor(Color.parseColor("#FF7700"));
+            holder.View3.setBackgroundColor(Color.parseColor("#FF7700"));
         }
 
         ArrayList<String> OorX = new ArrayList<String>();
@@ -77,7 +77,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         holder.View1.setText(OorX.get(1));
         holder.View2.setText(OorX.get(2));
         holder.noonView.setText(OorX.get(3));
-        holder.View3.setText(OorX.get(4));
+        holder.View5.setText(OorX.get(4));
         holder.View4.setText(OorX.get(5));
         holder.View6.setText(OorX.get(6));
         holder.View7.setText(OorX.get(7));

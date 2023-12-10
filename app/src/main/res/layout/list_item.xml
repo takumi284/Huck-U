@@ -8,111 +8,118 @@
     <!-- 三分割のビュー -->
     <TextView
         android:id="@+id/roomView"
-        android:layout_width="3dp"
-        android:layout_height="40dp"
+        android:layout_width="12dp"
+        android:layout_height="41dp"
         android:layout_weight="1"
         android:background="@color/brown"
         android:gravity="center"
         android:text="部屋"
-        android:textColor="@color/white" />
+        android:textSize="14sp"/>
 
     <TextView
         android:id="@+id/seatView"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_width="4dp"
+        android:layout_height="41dp"
         android:layout_weight="1"
         android:background="@color/brownWhite"
         android:gravity="center"
-        android:text="席数" />
+        android:text="席数"
+        android:textSize="14sp"/>
 
     <TextView
         android:id="@+id/morningView"
-        android:layout_width="0dp"
+        android:layout_width="6dp"
         android:layout_height="40dp"
         android:layout_weight="1"
         android:background="@color/brown"
         android:gravity="center"
         android:text="朝"
-        android:textColor="@color/white"/>
+        android:textSize="20sp"/>
     <TextView
         android:id="@+id/View1"
-        android:layout_width="0dp"
+        android:layout_width="6dp"
         android:layout_height="40dp"
         android:layout_weight="1"
         android:background="@color/brownWhite"
         android:gravity="center"
-        android:text="1限" />
+        android:text="1限"
+        android:textSize="20sp"/>
 
     <TextView
         android:id="@+id/View2"
-        android:layout_width="0dp"
+        android:layout_width="6dp"
         android:layout_height="40dp"
         android:layout_weight="1"
         android:background="@color/brown"
         android:gravity="center"
         android:text="2限"
-        android:textColor="@color/white"/>
+        android:textSize="20sp"/>
 
     <TextView
         android:id="@+id/noonView"
-        android:layout_width="0dp"
+        android:layout_width="6dp"
         android:layout_height="40dp"
         android:layout_weight="1"
         android:background="@color/brownWhite"
         android:gravity="center"
-        android:text="昼" />
+        android:text="昼"
+        android:textSize="20sp"/>
     <TextView
         android:id="@+id/View3"
-        android:layout_width="0dp"
+        android:layout_width="4dp"
         android:layout_height="40dp"
         android:layout_weight="1"
         android:background="@color/brown"
         android:gravity="center"
         android:text="3限"
-        android:textColor="@color/white"/>
+        android:textSize="20sp"/>
 
     <TextView
         android:id="@+id/View4"
-        android:layout_width="0dp"
+        android:layout_width="6dp"
         android:layout_height="40dp"
         android:layout_weight="1"
         android:background="@color/brownWhite"
         android:gravity="center"
-        android:text="4限" />
+        android:text="4限"
+        android:textSize="20sp"/>
 
     <TextView
         android:id="@+id/View5"
-        android:layout_width="0dp"
+        android:layout_width="6dp"
         android:layout_height="40dp"
         android:layout_weight="1"
         android:background="@color/brown"
         android:gravity="center"
-        android:text="5限" />
+        android:text="5限"
+        android:textSize="20sp"/>
     <TextView
         android:id="@+id/View6"
-        android:layout_width="0dp"
+        android:layout_width="4dp"
         android:layout_height="40dp"
         android:layout_weight="1"
         android:background="@color/brownWhite"
         android:gravity="center"
-        android:text="6限" />
+        android:text="6限"
+        android:textSize="20sp"/>
 
     <TextView
         android:id="@+id/View7"
-        android:layout_width="0dp"
+        android:layout_width="4dp"
         android:layout_height="40dp"
         android:layout_weight="1"
         android:background="@color/brown"
         android:gravity="center"
         android:text="7限"
-        android:textColor="@color/white"/>
+        android:textSize="20sp"/>
 
     <TextView
         android:id="@+id/nightView"
-        android:layout_width="0dp"
+        android:layout_width="4dp"
         android:layout_height="40dp"
         android:layout_weight="1"
         android:background="@color/brownWhite"
         android:gravity="center"
-        android:text="夜" />
+        android:text="夜"
+        android:textSize="20sp" />
 </LinearLayout>
