@@ -59,7 +59,7 @@
         android:layout_marginStart="12dp"
         android:ems="10"
         android:inputType="text"
-        android:textSize="34sp"
+        android:textSize="26sp"
         app:layout_constraintStart_toEndOf="@+id/nameTitleView"
         app:layout_constraintTop_toTopOf="@+id/nameTitleView" />
 
