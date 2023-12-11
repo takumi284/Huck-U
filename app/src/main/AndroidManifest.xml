@@ -20,13 +20,20 @@
         android:theme="@style/Theme.HuckU"
         tools:targetApi="31">
         <activity
+            android:name=".activity_icon2"
+            android:exported="false" />
+        <activity
+            android:name=".activity_map2l"
+            android:exported="false" />
+        <activity
+            android:name=".activity_map2r"
+            android:exported="false" />
+        <activity
             android:name=".GenerateQRCodeActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".FriendActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".ConfirmActivity"
             android:exported="true">
@@ -38,24 +45,19 @@
         </activity>
         <activity
             android:name=".CameraActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".ViewActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".MapActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".SettingProfActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>
