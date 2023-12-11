@@ -20,6 +20,9 @@
         android:theme="@style/Theme.HuckU"
         tools:targetApi="31">
         <activity
+            android:name=".activity_icon"
+            android:exported="false" />
+        <activity
             android:name=".activity_icon2"
             android:exported="false" />
         <activity
