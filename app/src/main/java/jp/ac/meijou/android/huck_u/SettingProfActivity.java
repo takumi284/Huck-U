@@ -22,7 +22,7 @@ public class SettingProfActivity extends AppCompatActivity {
 
         ImageButton selectImageButton = findViewById(R.id.selectImageButton);
         ImageView selectedImageView = findViewById(R.id.selectedImageView);
-        selectedImageView.setImageResource(R.drawable.icon_sample);
+        selectedImageView.setImageResource(R.drawable.icon_man);
         ImageButton backButton = findViewById(R.id.backButton);
 
         selectImageButton.setOnClickListener(new View.OnClickListener() {
