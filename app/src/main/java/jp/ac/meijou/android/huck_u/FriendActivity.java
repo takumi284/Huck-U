@@ -21,6 +21,6 @@ public class FriendActivity extends AppCompatActivity {
 //        binding.nameView.setText(qrCodeValue.substring(3));
 
         binding.nameView.setText("たくみ");
-        binding.friendImageView.setImageResource(R.drawable.icon_sample2);
+        binding.friendImageView.setImageResource(R.drawable.icon_sky);
     }
 }
