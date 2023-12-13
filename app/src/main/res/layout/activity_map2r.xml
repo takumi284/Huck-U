@@ -8,6 +8,19 @@
     tools:context=".activity_map2r">
 
     <ImageButton
+        android:id="@+id/imageButtonRight"
+        android:layout_width="88dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:contentDescription="このボタンはmap_2lへの遷移ボタンです"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/map_right" />
+
+    <ImageButton
         android:id="@+id/imageButtonQR2"
         android:layout_width="290dp"
         android:layout_height="57dp"

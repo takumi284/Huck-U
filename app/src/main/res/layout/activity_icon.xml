@@ -239,7 +239,7 @@
         android:layout_marginTop="220dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/icon_sample2" />
+        app:srcCompat="@drawable/icon_sky" />
 
     <ImageView
         android:id="@+id/imageView15"
@@ -279,7 +279,7 @@
         android:layout_marginTop="116dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/icon_sample" />
+        app:srcCompat="@drawable/icon_man" />
 
     <TextView
         android:id="@+id/textView14"

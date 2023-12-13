@@ -247,7 +247,7 @@
         android:layout_marginTop="204dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/icon_sample2" />
+        app:srcCompat="@drawable/icon_man" />
 
     <ImageView
         android:id="@+id/imageView10"
@@ -277,14 +277,14 @@
         android:layout_marginTop="116dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/icon_sample" />
+        app:srcCompat="@drawable/icon_ai" />
 
     <TextView
         android:id="@+id/textView18"
         android:layout_width="108dp"
         android:layout_height="61dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
         android:text="Place"
         android:textSize="34sp"
         app:layout_constraintStart_toEndOf="@+id/textView16"
@@ -294,7 +294,7 @@
         android:id="@+id/textView16"
         android:layout_width="131dp"
         android:layout_height="69dp"
-        android:layout_marginStart="44dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
         android:text="Name"
         android:textSize="48sp"
