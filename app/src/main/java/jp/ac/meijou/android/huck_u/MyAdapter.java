@@ -1,5 +1,7 @@
 package jp.ac.meijou.android.huck_u;
 
+import android.content.Context;
+import android.content.res.AssetManager;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +11,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.opencsv.CSVReader;
+import com.opencsv.exceptions.CsvValidationException;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -17,9 +25,9 @@ import java.util.Random;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     private List<String> data;
-
     public MyAdapter(List<String> data) {
         this.data = data;
+
     }
 
     private int rand, intContentView3, seats;
@@ -64,24 +72,64 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         }
 
         ArrayList<String> OorX = new ArrayList<String>();
+//        for (int i = 0; i < 9; i++){
+//            rand = random.nextInt(60);
+//            if (rand < 50){
+//                OorX.add("x");
+//            }
+//            else{
+//                OorX.add("o");
+//            }
+//        }
         for (int i = 0; i < 9; i++){
-            rand = random.nextInt(60);
-            if (rand < 50){
-                OorX.add("x");
-            }
-            else{
-                OorX.add("o");
-            }
+            OorX.add("o");
         }
         holder.morningView.setText(OorX.get(0));
         holder.View1.setText(OorX.get(1));
         holder.View2.setText(OorX.get(2));
         holder.noonView.setText(OorX.get(3));
-        holder.View5.setText(OorX.get(4));
-        holder.View4.setText(OorX.get(5));
+        holder.View4.setText(OorX.get(4));
+        holder.View5.setText(OorX.get(5));
         holder.View6.setText(OorX.get(6));
         holder.View7.setText(OorX.get(7));
         holder.nightView.setText(OorX.get(8));
+
+        Context context = holder.itemView.getContext();
+        try {
+            AssetManager assetManager = context.getAssets();
+            InputStreamReader isr = new InputStreamReader(assetManager.open("E.csv"));
+
+            try (CSVReader reader = new CSVReader(isr)) {
+                String[] nextLine;
+
+                while (true) {
+                    try {
+                        if ((nextLine = reader.readNext()) != null) {
+                            if ("0910".equals(nextLine[1]) && rooms.get(position).equals(nextLine[11])) {
+
+                                holder.View1.setText("x");
+
+                            } else if ("1050".equals(nextLine[1]) && rooms.get(position).equals(nextLine[11])) {
+                                holder.View2.setText("x");
+                            } else if ("1450".equals(nextLine[1]) && rooms.get(position).equals(nextLine[11])) {
+                                holder.View4.setText("x");
+                            } else if ("1630".equals(nextLine[1]) && rooms.get(position).equals(nextLine[11])) {
+                                holder.View5.setText("x");
+                            } else if ("1810".equals(nextLine[1]) && rooms.get(position).equals(nextLine[11])) {
+                                holder.View6.setText("x");
+                            }
+                        } else {
+                            break;
+                        }
+                    } catch (CsvValidationException e) {
+                        // CsvValidationException を処理する
+                        e.printStackTrace();
+                    }
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
