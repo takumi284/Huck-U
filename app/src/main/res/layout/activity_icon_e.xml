@@ -8,34 +8,12 @@
     tools:context=".activity_iconE">
 
     <TextView
-        android:id="@+id/textView38"
-        android:layout_width="98dp"
-        android:layout_height="52dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="432dp"
-        android:text="N-403"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/textView39"
-        android:layout_width="92dp"
-        android:layout_height="54dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="540dp"
-        android:text="N-321"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
         android:id="@+id/textView28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="124dp"
         android:layout_marginTop="144dp"
-        android:text="〇〇〇〇〇〇"
+        android:text="田中悠太"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -46,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="124dp"
         android:layout_marginTop="256dp"
-        android:text="〇〇〇〇〇〇"
+        android:text="小野寺理恵"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -104,4 +82,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/back_button" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="98dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="296dp"
+        android:layout_marginTop="144dp"
+        android:text="N-321"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="98dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="296dp"
+        android:layout_marginTop="244dp"
+        android:text="N-403"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
