@@ -9,7 +9,7 @@
 
     <View
         android:id="@+id/backgroundView"
-        android:layout_width="349dp"
+        android:layout_width="320dp"
         android:layout_height="48dp"
         android:background="@color/skyBlue"
         android:padding="100dp"
@@ -54,7 +54,7 @@
 
     <EditText
         android:id="@+id/editTextText"
-        android:layout_width="245dp"
+        android:layout_width="190dp"
         android:layout_height="50dp"
         android:layout_marginStart="12dp"
         android:ems="10"

@@ -2,7 +2,9 @@ package jp.ac.meijou.android.huck_u;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -23,12 +25,12 @@ public class ConfirmActivity extends AppCompatActivity {
         String qrCodeValue = getIntent().getStringExtra("QRCodeValue");
 
         // qrCodeValue を使用して必要な処理を行う
-        if (qrCodeValue != null) {
-            // qrCodeValue を使用して何か処理を行う
-            binding.editSchoolNumber.setText(qrCodeValue.substring(3));
-        } else {
-            Log.e("AnotherActivity", "QR Code Value is null");
-        }
+//        if (qrCodeValue != null) {
+//            // qrCodeValue を使用して何か処理を行う
+//            binding.editSchoolNumber.setText(qrCodeValue.substring(3));
+//        } else {
+//            Log.e("AnotherActivity", "QR Code Value is null");
+//        }
 
         binding.oKButton.setOnClickListener(view -> {
             Intent intent;

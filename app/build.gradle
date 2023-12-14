@@ -1,5 +1,6 @@
 plugins {
-    id 'com.android.application'
+    id "com.android.application"
+    id "com.google.gms.google-services"
 }
 
 android {
@@ -74,4 +75,7 @@ dependencies {
 
     //csvのための記述
     implementation 'com.opencsv:opencsv:5.6'
+
+    //firebase
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
 }

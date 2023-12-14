@@ -2,7 +2,9 @@ package jp.ac.meijou.android.huck_u;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import jp.ac.meijou.android.huck_u.databinding.ActivityMap2rBinding;
@@ -15,6 +17,12 @@ public class activity_map2r extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMap2rBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        //保存
+        SharedPreferences preferences = getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putInt("confirmed", 1);
+        editor.apply();
 
         binding.imageButtonP2.setOnClickListener(view -> {
             Intent intent;
