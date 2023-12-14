@@ -29,6 +29,13 @@ android {
     viewBinding {
         enabled = true
     }
+    sourceSets {
+        main {
+            assets {
+                srcDirs 'src\\main\\assets', 'src\\main\\assets\\2'
+            }
+        }
+    }
 }
 
 dependencies {
@@ -52,6 +59,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
+    //カメラのための記述
     def camerax_version = "1.2.1"
     implementation "androidx.camera:camera-core:$camerax_version"
     implementation "androidx.camera:camera-camera2:$camerax_version"
@@ -59,4 +67,7 @@ dependencies {
     implementation "androidx.camera:camera-view:$camerax_version"
     implementation "com.google.mlkit:barcode-scanning:17.0.0" // ML Kitのバージョン
     implementation 'com.google.zxing:core:3.4.1'
+
+    //csvのための記述
+    implementation 'com.opencsv:opencsv:5.6'
 }
