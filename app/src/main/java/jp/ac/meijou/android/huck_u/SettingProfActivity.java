@@ -22,7 +22,7 @@ public class SettingProfActivity extends AppCompatActivity {
 
         ImageButton selectImageButton = findViewById(R.id.selectImageButton);
         ImageView selectedImageView = findViewById(R.id.selectedImageView);
-        selectedImageView.setImageResource(R.drawable.icon_man);
+        selectedImageView.setImageResource(R.drawable.icon_sample);
         ImageButton backButton = findViewById(R.id.backButton);
 
         selectImageButton.setOnClickListener(new View.OnClickListener() {
@@ -39,12 +39,10 @@ public class SettingProfActivity extends AppCompatActivity {
             finish();
         });
     }
-
     private void openGallery() {
         Intent galleryIntent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(galleryIntent, PICK_IMAGE_REQUEST);
     }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
