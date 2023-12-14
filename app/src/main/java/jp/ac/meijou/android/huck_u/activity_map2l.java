@@ -2,7 +2,9 @@ package jp.ac.meijou.android.huck_u;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import jp.ac.meijou.android.huck_u.databinding.ActivityMap2lBinding;
@@ -15,6 +17,12 @@ public class activity_map2l extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMap2lBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        //保存
+        SharedPreferences preferences = getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putInt("confirmed", 2);
+        editor.apply();
 
         binding.imageButtonP3.setOnClickListener(view -> {
             Intent intent;
@@ -37,37 +45,37 @@ public class activity_map2l extends AppCompatActivity {
             finish();
         });
 
-//        binding.imageButtonN3.setOnClickListener(view -> {
-//            Intent intent;
-//            intent = new Intent(activity_map2l.this, activity_iconE.class);
-//            startActivity(intent);
-//            finish();
-//        });
-//
-//        binding.imageButtonT3.setOnClickListener(view -> {
-//            Intent intent;
-//            intent = new Intent(activity_map2l.this, activity_icon2.class);
-//            startActivity(intent);
-//            finish();
-//        });
-//
-//        binding.imageButtonE3.setOnClickListener(view -> {
-//            Intent intent;
-//            intent = new Intent(activity_map2l.this, activity_icon.class);
-//            startActivity(intent);
-//            finish();
-//        });
+        binding.imageButtonN3.setOnClickListener(view -> {
+            Intent intent;
+            intent = new Intent(activity_map2l.this, FirebaseActivity.class);
+            startActivity(intent);
+            finish();
+        });
+
+        binding.imageButtonT3.setOnClickListener(view -> {
+            Intent intent;
+            intent = new Intent(activity_map2l.this, FirebaseActivity.class);
+            startActivity(intent);
+            finish();
+        });
+
+        binding.imageButtonE3.setOnClickListener(view -> {
+            Intent intent;
+            intent = new Intent(activity_map2l.this, FirebaseActivity.class);
+            startActivity(intent);
+            finish();
+        });
 
         binding.imageButtonS3.setOnClickListener(view -> {
             Intent intent;
-            intent = new Intent(activity_map2l.this, EmptylActivity.class);
+            intent = new Intent(activity_map2l.this, FirebaseActivity.class);
             startActivity(intent);
             finish();
         });
 
         binding.imageButtonG3.setOnClickListener(view -> {
             Intent intent;
-            intent = new Intent(activity_map2l.this, EmptylActivity.class);
+            intent = new Intent(activity_map2l.this, FirebaseActivity.class);
             startActivity(intent);
             finish();
         });

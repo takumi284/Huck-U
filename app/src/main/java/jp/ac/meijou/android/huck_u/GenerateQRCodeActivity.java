@@ -3,6 +3,8 @@ package jp.ac.meijou.android.huck_u;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -32,9 +34,18 @@ public class GenerateQRCodeActivity extends AppCompatActivity {
 
         generateQRCode("FRIタクミ");
 
+        //読み取り
+        SharedPreferences preferences = getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
+        int confirmed = preferences.getInt("confirmed", 0);
         binding.backButton.setOnClickListener(view -> {
             Intent intent;
-            intent = new Intent(GenerateQRCodeActivity.this, MapActivity.class);
+            if (confirmed == 1){
+                intent = new Intent(GenerateQRCodeActivity.this, activity_map2r.class);
+            } else if (confirmed == 2) {
+                intent = new Intent(GenerateQRCodeActivity.this, activity_map2l.class);
+            } else{
+                intent = new Intent(GenerateQRCodeActivity.this, MapActivity.class);
+            }
             startActivity(intent);
             finish();
         });

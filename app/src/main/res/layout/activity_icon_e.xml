@@ -9,46 +9,43 @@
 
     <TextView
         android:id="@+id/textView38"
-        android:layout_width="98dp"
-        android:layout_height="52dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="432dp"
+        android:layout_width="101dp"
+        android:layout_height="55dp"
         android:text="N-403"
         android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/textView39"
+        app:layout_constraintTop_toTopOf="@+id/textView27" />
 
     <TextView
         android:id="@+id/textView39"
-        android:layout_width="92dp"
-        android:layout_height="54dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="540dp"
+        android:layout_width="109dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="16dp"
         android:text="N-321"
         android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView28" />
 
     <TextView
         android:id="@+id/textView28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="144dp"
-        android:text="〇〇〇〇〇〇"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="136dp"
+        android:text="ひゅーまん"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView8"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView27"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="256dp"
-        android:text="〇〇〇〇〇〇"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="252dp"
+        android:text="ぺんぎん"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView28"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -75,8 +72,8 @@
         android:id="@+id/textView18"
         android:layout_width="108dp"
         android:layout_height="61dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
         android:text="Place"
         android:textSize="34sp"
         app:layout_constraintStart_toEndOf="@+id/textView16"
@@ -84,12 +81,12 @@
 
     <TextView
         android:id="@+id/textView16"
-        android:layout_width="131dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="103dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         android:text="Name"
-        android:textSize="48sp"
+        android:textSize="34sp"
         app:layout_constraintStart_toEndOf="@+id/imageButton3"
         app:layout_constraintTop_toTopOf="parent" />
 

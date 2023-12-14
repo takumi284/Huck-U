@@ -7,6 +7,18 @@
     android:background="@color/backgroundColor"
     tools:context=".activity_map2r">
 
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/background" />
+
     <ImageButton
         android:id="@+id/imageButtonRight"
         android:layout_width="88dp"
@@ -21,32 +33,44 @@
         app:srcCompat="@drawable/map_right" />
 
     <ImageButton
-        android:id="@+id/imageButtonQR2"
-        android:layout_width="290dp"
-        android:layout_height="57dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginBottom="28dp"
-        android:contentDescription="このボタンはqrへの遷移ボタンです"
+        android:id="@+id/imageButtonT2"
+        android:layout_width="84dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="148dp"
+        android:contentDescription="このボタンはタワーのボタンです"
         android:padding="0dp"
         android:scaleType="fitCenter"
-        android:background="@color/backgroundColor"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/map_qrbutton" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/map_t" />
 
     <ImageButton
-        android:id="@+id/imageButtonP2"
-        android:layout_width="304dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="8dp"
-        android:contentDescription="このボタンはプロフィールへの遷移ボタンです"
+        android:id="@+id/imageButtonS2"
+        android:layout_width="82dp"
+        android:layout_height="142dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="232dp"
+        android:contentDescription="このボタンはs棟のボタンです"
         android:padding="0dp"
         android:scaleType="fitCenter"
         android:background="@color/backgroundColor"
-        app:layout_constraintBottom_toTopOf="@+id/imageButtonQR2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/map_s" />
+
+    <ImageButton
+        android:id="@+id/imageButtonN2"
+        android:layout_width="215dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="104dp"
+        android:contentDescription="このボタンはn棟のボタンです"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/map_profilebutton" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/map_n" />
 
     <ImageButton
         android:id="@+id/imageButtonE2"
@@ -63,117 +87,97 @@
 
     <ImageButton
         android:id="@+id/imageButtonG2"
-        android:layout_width="93dp"
-        android:layout_height="105dp"
-        android:layout_marginTop="188dp"
-        android:layout_marginEnd="36dp"
+        android:layout_width="82dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="24dp"
         android:contentDescription="このボタンはグランのボタンです"
         android:padding="0dp"
         android:scaleType="fitCenter"
+        android:background="@color/backgroundColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/map_g" />
 
     <ImageButton
-        android:id="@+id/imageButtonN2"
-        android:layout_width="215dp"
-        android:layout_height="63dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="112dp"
-        android:contentDescription="このボタンはn棟のボタンです"
+        android:id="@+id/imageButtonQR2"
+        android:layout_width="290dp"
+        android:layout_height="57dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="28dp"
+        android:contentDescription="このボタンはqrへの遷移ボタンです"
         android:padding="0dp"
         android:scaleType="fitCenter"
+        android:background="@color/backgroundColor"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/map_n" />
+        app:srcCompat="@drawable/map_qrbutton" />
 
     <ImageButton
-        android:id="@+id/imageButtonS2"
-        android:layout_width="85dp"
-        android:layout_height="156dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="228dp"
-        android:contentDescription="このボタンはs棟のボタンです"
+        android:id="@+id/imageButtonP2"
+        android:layout_width="290dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="このボタンはプロフィールへの遷移ボタンです"
         android:padding="0dp"
         android:scaleType="fitCenter"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/map_s" />
-
-    <ImageButton
-        android:id="@+id/imageButtonT2"
-        android:layout_width="84dp"
-        android:layout_height="94dp"
-        android:layout_marginTop="260dp"
-        android:layout_marginEnd="168dp"
-        android:contentDescription="このボタンはタワーのボタンです"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
+        android:background="@color/backgroundColor"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonQR2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/map_t" />
+        app:srcCompat="@drawable/map_profilebutton" />
 
     <ImageView
         android:id="@+id/imageView_nuclear"
         android:layout_width="20dp"
         android:layout_height="22dp"
-        android:layout_marginStart="248dp"
-        android:layout_marginTop="396dp"
         android:background="@color/backgroundColor"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonE2"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonE2"
         app:srcCompat="@drawable/icon_nuclear" />
 
     <ImageView
         android:id="@+id/imageView_sky"
         android:layout_width="20dp"
         android:layout_height="22dp"
-        android:layout_marginStart="248dp"
-        android:layout_marginTop="420dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_nuclear"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_nuclear"
         app:srcCompat="@drawable/icon_sky" />
 
     <ImageView
         android:id="@+id/imageView_gear"
         android:layout_width="20dp"
         android:layout_height="22dp"
-        android:layout_marginStart="248dp"
-        android:layout_marginTop="444dp"
+        android:layout_marginTop="4dp"
         android:background="@color/backgroundColor"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_sky"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_sky"
         app:srcCompat="@drawable/icon_gear" />
 
     <ImageView
         android:id="@+id/imageView_man2"
         android:layout_width="20dp"
         android:layout_height="22dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="48dp"
         android:background="@color/backgroundColor"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonN2"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonN2"
         app:srcCompat="@drawable/icon_man2" />
 
     <ImageView
         android:id="@+id/imageView_penguin"
         android:layout_width="20dp"
         android:layout_height="22dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="72dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_man2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_man2"
         app:srcCompat="@drawable/icon_penguin" />
 
     <ImageView
         android:id="@+id/imageView_ai"
         android:layout_width="20dp"
         android:layout_height="22dp"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="252dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonT2"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonT2"
         app:srcCompat="@drawable/icon_ai" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
