@@ -9,6 +9,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -55,6 +56,14 @@ public class SettingProfActivity extends AppCompatActivity {
         });
 
         editTextText.setText(name);
+
+        if (name.equals("こうすけ")){
+            selectedImageView.setImageResource(R.drawable.icon_kosuke);
+        } else if (name.equals("たくみ")) {
+            selectedImageView.setImageResource(R.drawable.icon_man);
+        } else if (name.equals("やふ太郎")) {
+            selectedImageView.setImageResource(R.drawable.icon_y);
+        }
     }
     private void openGallery() {
         Intent galleryIntent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);

@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 
 import jp.ac.meijou.android.huck_u.databinding.ActivityMap2rBinding;
 
@@ -23,6 +24,21 @@ public class activity_map2r extends AppCompatActivity {
         SharedPreferences.Editor editor = preferences.edit();
         editor.putInt("confirmed", 1);
         editor.apply();
+
+        //読み取り
+        String kosuke = preferences.getString("FRI221205102", "");
+        String takumi = preferences.getString("FRI221205139", "");
+        String yt = preferences.getString("FRI221205999", "");
+
+        if (kosuke.equals("こうすけ")){
+            binding.imageViewNuclear.setImageResource(R.drawable.icon_kosuke);
+        }
+        if (takumi.equals("たくみ")){
+            binding.imageViewSky.setImageResource(R.drawable.icon_man);
+        }
+        if (yt.equals("やふ太郎")){
+            binding.imageViewGear.setImageResource(R.drawable.icon_y);
+        }
 
         binding.imageButtonP2.setOnClickListener(view -> {
             Intent intent;
@@ -42,6 +58,7 @@ public class activity_map2r extends AppCompatActivity {
             Intent intent;
             intent = new Intent(activity_map2r.this, activity_map2l.class);
             startActivity(intent);
+            overridePendingTransition(0, 0);
             finish();
         });
 
@@ -77,6 +94,21 @@ public class activity_map2r extends AppCompatActivity {
             Intent intent;
             intent = new Intent(activity_map2r.this, EmptyActivity.class);
             startActivity(intent);
+            finish();
+        });
+
+        binding.resetButton.setOnClickListener(view -> {
+            //reset
+            editor.putString("FRI221205102", "");
+            editor.putString("FRI221205139", "");
+            editor.putString("FRI221205999", "");
+
+            editor.apply();
+
+            Intent intent;
+            intent = new Intent(activity_map2r.this, activity_map2r.class);
+            startActivity(intent);
+            overridePendingTransition(0, 0);
             finish();
         });
     }

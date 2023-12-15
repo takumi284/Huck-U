@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -18,6 +19,7 @@ import com.google.zxing.qrcode.QRCodeWriter;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 
 import jp.ac.meijou.android.huck_u.databinding.ActivityGenerateQrcodeBinding;
 
@@ -32,11 +34,14 @@ public class GenerateQRCodeActivity extends AppCompatActivity {
         binding = ActivityGenerateQrcodeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        generateQRCode("FRIタクミ");
-
         //読み取り
         SharedPreferences preferences = getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
         int confirmed = preferences.getInt("confirmed", 0);
+        String name = preferences.getString("userName", "");
+        String id = getIntent().getStringExtra("userid");
+
+        generateQRCode("FRI" + id + name);
+
         binding.backButton.setOnClickListener(view -> {
             Intent intent;
             if (confirmed == 1){
@@ -55,7 +60,7 @@ public class GenerateQRCodeActivity extends AppCompatActivity {
         QRCodeWriter writer = new QRCodeWriter();
         try {
             // UTF-8 エンコーディングを使用して文字列をバイト配列に変換
-            String encodedData = URLEncoder.encode(data, "UTF-8");
+            String encodedData = URLEncoder.encode(data, StandardCharsets.UTF_8);
             BitMatrix bitMatrix = writer.encode(encodedData, BarcodeFormat.QR_CODE, 512, 512);
 
             int width = bitMatrix.getWidth();
@@ -71,7 +76,7 @@ public class GenerateQRCodeActivity extends AppCompatActivity {
             // 生成したQRコードをImageViewに表示
             binding.qrView.setImageBitmap(bmp);
 
-        } catch (WriterException | UnsupportedEncodingException e) {
+        } catch (WriterException e) {
             e.printStackTrace();
         }
     }

@@ -42,6 +42,7 @@ public class activity_map2l extends AppCompatActivity {
             Intent intent;
             intent = new Intent(activity_map2l.this, activity_map2r.class);
             startActivity(intent);
+            overridePendingTransition(0, 0);
             finish();
         });
 
@@ -49,6 +50,7 @@ public class activity_map2l extends AppCompatActivity {
             Intent intent;
             intent = new Intent(activity_map2l.this, FirebaseActivity.class);
             startActivity(intent);
+            overridePendingTransition(0, 0);
             finish();
         });
 
@@ -56,6 +58,7 @@ public class activity_map2l extends AppCompatActivity {
             Intent intent;
             intent = new Intent(activity_map2l.this, FirebaseActivity.class);
             startActivity(intent);
+            overridePendingTransition(0, 0);
             finish();
         });
 
@@ -63,6 +66,7 @@ public class activity_map2l extends AppCompatActivity {
             Intent intent;
             intent = new Intent(activity_map2l.this, FirebaseActivity.class);
             startActivity(intent);
+            overridePendingTransition(0, 0);
             finish();
         });
 
@@ -70,6 +74,7 @@ public class activity_map2l extends AppCompatActivity {
             Intent intent;
             intent = new Intent(activity_map2l.this, FirebaseActivity.class);
             startActivity(intent);
+            overridePendingTransition(0, 0);
             finish();
         });
 
@@ -77,6 +82,7 @@ public class activity_map2l extends AppCompatActivity {
             Intent intent;
             intent = new Intent(activity_map2l.this, FirebaseActivity.class);
             startActivity(intent);
+            overridePendingTransition(0, 0);
             finish();
         });
     }

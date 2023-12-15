@@ -33,10 +33,17 @@ public class ConfirmActivity extends AppCompatActivity {
 //        }
 
         binding.oKButton.setOnClickListener(view -> {
+            //保存
+            SharedPreferences preferences = getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putString("userId", "False");
+            editor.apply();
+
             Intent intent;
             intent = new Intent(ConfirmActivity.this, FirebaseReadActivity.class);
             intent.putExtra("userid",binding.editSchoolNumber.getText().toString());
             startActivity(intent);
+            overridePendingTransition(0, 0);
             finish();
         });
 

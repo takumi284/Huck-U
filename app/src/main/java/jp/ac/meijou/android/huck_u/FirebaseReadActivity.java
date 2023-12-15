@@ -67,26 +67,30 @@ public class FirebaseReadActivity extends AppCompatActivity {
                                 // マッチが一致し，見つかればその値を取得
                                 if(schoolId.equals(AcquireId)){
                                     Log.d("firestore",name);
-                                }else{
+                                    //保存
+                                    SharedPreferences preferences = getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
+                                    SharedPreferences.Editor editor = preferences.edit();
+                                    editor.putString("userName", name);
+                                    editor.putString("userId", schoolId);
+                                    editor.apply();
+
+                                    //移動
+                                    Intent intent;
+                                    intent = new Intent(FirebaseReadActivity.this,activity_map2r.class);
+                                    startActivity(intent);
+                                    finish();
+                                    break;
+                                } else{
                                     name = "notfound";
                                 }
-
-                                //intentを使う
-//                                Intent intent;
-//                                intent = new Intent(FirebaseReadActivity.this,activity_map2r.class);
-//                                intent.putExtra("name",name);
-//                                startActivity(intent);
-//                                finish();
-
-                                //保存
-                                SharedPreferences preferences = getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
-                                SharedPreferences.Editor editor = preferences.edit();
-                                editor.putString("userName", name);
-                                editor.apply();
-
+                            }
+                            //読み取り
+                            SharedPreferences preferences = getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
+                            String id = preferences.getString("userId", "miss");
+                            if (!id.equals(AcquireId)){
                                 //移動
                                 Intent intent;
-                                intent = new Intent(FirebaseReadActivity.this,activity_map2r.class);
+                                intent = new Intent(FirebaseReadActivity.this,ConfirmActivity.class);
                                 startActivity(intent);
                                 finish();
                             }
@@ -95,5 +99,10 @@ public class FirebaseReadActivity extends AppCompatActivity {
                         }
                     }
                 });
+
+//        Intent intent;
+//        intent = new Intent(FirebaseReadActivity.this, ConfirmActivity.class);
+//        startActivity(intent);
+//        finish();
     }
 }
