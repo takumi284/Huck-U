@@ -34,7 +34,8 @@ public class ConfirmActivity extends AppCompatActivity {
 
         binding.oKButton.setOnClickListener(view -> {
             Intent intent;
-            intent = new Intent(ConfirmActivity.this, activity_map2r.class);
+            intent = new Intent(ConfirmActivity.this, FirebaseReadActivity.class);
+            intent.putExtra("userid",binding.editSchoolNumber.getText().toString());
             startActivity(intent);
             finish();
         });
