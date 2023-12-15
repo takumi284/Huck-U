@@ -28,6 +28,7 @@ public class MapActivity extends AppCompatActivity {
             Intent intent;
             intent = new Intent(MapActivity.this, FirebaseActivity.class);
             startActivity(intent);
+            overridePendingTransition(0, 0);
             finish();
         });
 
@@ -35,6 +36,7 @@ public class MapActivity extends AppCompatActivity {
             Intent intent;
             intent = new Intent(MapActivity.this, FirebaseActivity.class);
             startActivity(intent);
+            overridePendingTransition(0, 0);
             finish();
         });
 
@@ -43,6 +45,7 @@ public class MapActivity extends AppCompatActivity {
             Intent intent;
             intent = new Intent(MapActivity.this, FirebaseActivity.class);
             startActivity(intent);
+            overridePendingTransition(0, 0);
             finish();
         });
 
@@ -50,6 +53,7 @@ public class MapActivity extends AppCompatActivity {
             Intent intent;
             intent = new Intent(MapActivity.this, FirebaseActivity.class);
             startActivity(intent);
+            overridePendingTransition(0, 0);
             finish();
         });
 
@@ -57,6 +61,7 @@ public class MapActivity extends AppCompatActivity {
             Intent intent;
             intent = new Intent(MapActivity.this, FirebaseActivity.class);
             startActivity(intent);
+            overridePendingTransition(0, 0);
             finish();
         });
 
@@ -64,7 +69,6 @@ public class MapActivity extends AppCompatActivity {
             Intent intent;
             intent = new Intent(MapActivity.this, SettingProfActivity.class);
             startActivity(intent);
-//            overridePendingTransition(0, 0);
             finish();
         });
 
