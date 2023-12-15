@@ -54,12 +54,13 @@
 
     <EditText
         android:id="@+id/editTextText"
-        android:layout_width="190dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="12dp"
+        android:layout_width="194dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="0dp"
         android:ems="10"
         android:inputType="text"
-        android:textSize="26sp"
+        android:textSize="30sp"
         app:layout_constraintStart_toEndOf="@+id/nameTitleView"
         app:layout_constraintTop_toTopOf="@+id/nameTitleView" />
 
